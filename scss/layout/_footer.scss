@@ -1,0 +1,58 @@
+.footer {
+  padding: 2rem 2rem;
+  background-color: color(primary);
+
+  &-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+
+    h4 {
+      font-size: size(md);
+      color: color(white);
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      color: color(white);
+      font-size: size(sm);
+
+      &:hover {
+        border-bottom: 0.1rem solid color(white);
+      }
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+      width: 5rem;
+    }
+
+    p {
+      color: color(white);
+      font-size: size(sm);
+    }
+
+    .bottom-links {
+      a {
+        color: color(white);
+        font-size: size(lg);
+        margin-right: 4rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: darken(color(white), 10%);
+        }
+      }
+    }
+  }
+}
