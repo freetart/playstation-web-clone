@@ -1,0 +1,29 @@
+.store {
+  @include sectionSpacing();
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &-link {
+    a i {
+      font-size: size(xl) + 5rem;
+      color: color(black);
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: color(primary);
+        transform: scale(1.1);
+      }
+    }
+
+    p {
+      @include textStyles();
+      font-size: size(lg);
+      margin-top: 2rem;
+    }
+  }
+}
