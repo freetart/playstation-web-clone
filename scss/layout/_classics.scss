@@ -1,0 +1,59 @@
+.classics {
+  @include sectionSpacing();
+  max-width: 1300px;
+  margin: auto;
+
+  h2 {
+    @include headingStyles();
+    color: color(primary);
+    font-size: size(xl);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    @include textStyles();
+    font-size: size(md);
+    text-align: center;
+  }
+
+  .classics-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 4rem;
+
+    .classic {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h3 {
+        @include headingStyles();
+        font-size: size(lg);
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(md);
+      }
+
+      img {
+        width: 40rem;
+      }
+
+      small {
+        margin: 2rem 0;
+        font-size: size(xs);
+      }
+
+      .btn-light {
+        width: 30%;
+      }
+    }
+  }
+}
