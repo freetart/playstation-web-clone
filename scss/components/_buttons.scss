@@ -1,9 +1,9 @@
 .btn-dark {
-  padding: 0.7rem;
+  padding: 1.3rem;
   font-size: size(xs);
   background-color: color(black);
   color: color(white);
-  width: 30%;
+  width: 20%;
   border: 0.1rem solid color(primary);
   transition: all 0.3s ease;
 
@@ -11,5 +11,17 @@
     color: color(white);
     background-color: color(primary);
     border: 0.1rem solid color(white);
+  }
+}
+
+.btn-light {
+  @extend .btn-dark;
+
+  background-color: color(primary);
+  width: 20%;
+
+  &:hover {
+    background-color: color(black);
+    border: 0.1rem solid color(primary);
   }
 }
