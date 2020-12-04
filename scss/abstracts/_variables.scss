@@ -1,6 +1,8 @@
 $colors: (
-  blackColor: #000,
-  whiteColor: #fff,
+  primary: #0072ce,
+  black: #000,
+  white: #fff,
+  gray: #282829,
 );
 
 @function color($color-name) {
