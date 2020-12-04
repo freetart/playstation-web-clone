@@ -1,0 +1,31 @@
+.game-showcase {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(/images/nba.jpg) right center/cover no-repeat;
+  height: 70vh;
+  position: relative;
+
+  &-content {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    text-shadow: 0.4rem 0.4rem 1rem color(black);
+    text-align: center;
+
+    h3 {
+      @include headingStyles();
+      color: color(white);
+      font-size: size(xl) + 4rem;
+    }
+
+    p {
+      @include textStyles();
+      color: color(white);
+      font-size: size(lg);
+      margin: 2rem 0;
+    }
+
+    .btn-dark {
+      width: 100%;
+    }
+  }
+}
