@@ -8,6 +8,10 @@
     grid-gap: 2rem;
     margin-bottom: 2rem;
 
+    @include response(md) {
+      grid-template-columns: 1fr;
+    }
+
     h4 {
       font-size: size(md);
       color: color(white);
@@ -32,14 +36,17 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
 
     img {
-      width: 5rem;
+      width: 6rem;
     }
 
     p {
       color: color(white);
       font-size: size(sm);
+      margin: 2rem 2rem;
     }
 
     .bottom-links {

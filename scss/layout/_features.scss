@@ -13,6 +13,11 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 3rem 0;
+
+    @include response(xxl) {
+      grid-template-columns: 1fr;
+    }
 
     &-info {
       h4 {
@@ -31,11 +36,22 @@
         font-size: size(md);
         width: 70%;
         margin: 2rem auto;
+
+        @include response(md) {
+          width: 90%;
+        }
       }
     }
 
     &-img {
       width: 80rem;
+
+      @include response(xxl) {
+        order: -1;
+        width: 70%;
+        margin: 0 auto;
+        display: block;
+      }
     }
   }
 }

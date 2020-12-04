@@ -1,19 +1,28 @@
 .game-showcase {
-  background: url(/images/nba.jpg) right center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(/images/nba.jpg) right center/cover no-repeat;
   height: 70vh;
-  position: relative;
+  // position: relative;
+
+  @include response(xxl) {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(/images/nba.jpg) center center/cover no-repeat;
+  }
 
   &-content {
-    position: absolute;
-    top: 50%;
-    left: 15%;
+    @include flexLayout();
+    height: 70vh;
+
     text-shadow: 0.4rem 0.4rem 1rem color(black);
-    text-align: center;
 
     h3 {
       @include headingStyles();
       color: color(white);
       font-size: size(xl) + 4rem;
+
+      @include response(md) {
+        font-size: size(xl) + 2rem;
+      }
     }
 
     p {
@@ -21,10 +30,14 @@
       color: color(white);
       font-size: size(lg);
       margin: 2rem 0;
+
+      @include response(md) {
+        font-size: size(md);
+      }
     }
 
     .btn-dark {
-      width: 40%;
+      width: 20rem;
     }
   }
 }
@@ -33,12 +46,11 @@
   @extend .game-showcase;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(/images/sackboy.jpg) center center/cover no-repeat;
+
   &-content {
-    position: absolute;
-    top: 50%;
-    left: 15%;
+    @include sectionSpacing();
+    @include flexLayout();
     text-shadow: 0.4rem 0.4rem 1rem color(black);
-    text-align: center;
 
     h3 {
       @include headingStyles();
@@ -54,7 +66,7 @@
     }
 
     .btn-dark {
-      width: 40%;
+      width: 20rem;
     }
   }
 }

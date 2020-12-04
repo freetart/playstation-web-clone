@@ -9,15 +9,23 @@
     justify-content: space-around;
     padding: 1rem;
 
+    @include response(lg) {
+      justify-content: center;
+    }
+
     img {
       width: 5rem;
     }
 
-    a {
+    .links a {
       color: color(white);
       font-size: size(sm);
       margin-right: 2rem;
       transition: color 0.3s ease;
+
+      @include response(lg) {
+        display: none;
+      }
 
       &:hover {
         color: color(primary);
@@ -27,6 +35,10 @@
 
   .navigation-right {
     position: relative;
+
+    @include response(lg) {
+      display: none;
+    }
 
     input {
       padding: 0.7rem;
@@ -39,9 +51,17 @@
     }
 
     a i {
+      color: color(white);
+      font-size: size(sm);
+      margin-right: 2rem;
+      transition: color 0.3s ease;
       position: absolute;
       top: 0.5rem;
-      right: 3rem;
+      right: 0.1rem;
+
+      &:hover {
+        color: color(primary);
+      }
     }
   }
 }

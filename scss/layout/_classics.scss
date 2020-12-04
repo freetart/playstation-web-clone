@@ -26,11 +26,19 @@
     text-align: center;
     margin-top: 4rem;
 
+    @include response(lg) {
+      grid-template-columns: 1fr;
+    }
+
     .classic {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      @include response(lg) {
+        margin-top: 2rem;
+      }
 
       h3 {
         @include headingStyles();
@@ -44,6 +52,10 @@
 
       img {
         width: 40rem;
+
+        @include response(md) {
+          width: 30rem;
+        }
       }
 
       small {
@@ -52,7 +64,7 @@
       }
 
       .btn-light {
-        width: 30%;
+        width: 20rem;
       }
     }
   }

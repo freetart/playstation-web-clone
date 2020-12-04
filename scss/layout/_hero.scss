@@ -2,13 +2,10 @@
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(/images/hero.jpg) center center/cover no-repeat fixed;
   height: 100vh;
-  position: relative;
 
   &-content {
-    position: absolute;
-    top: 60%;
-    left: 60%;
-    transform: translate(-50%, -50%);
+    @include flexLayout();
+    height: 100vh;
 
     h1 {
       @include headingStyles();
@@ -20,7 +17,12 @@
       @include textStyles();
       color: color(white);
       font-size: size(xl);
+      width: 70%;
       margin: 2rem 0;
+
+      @include response(md) {
+        width: 90%;
+      }
     }
 
     img {
