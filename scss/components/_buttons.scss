@@ -3,12 +3,13 @@
   font-size: size(xs);
   background-color: color(black);
   color: color(white);
-  width: 10rem;
-  border: 0;
+  width: 30%;
+  border: 0.1rem solid color(primary);
   transition: all 0.3s ease;
 
   &:hover {
     color: color(white);
     background-color: color(primary);
+    border: 0.1rem solid color(white);
   }
 }
