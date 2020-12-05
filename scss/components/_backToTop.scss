@@ -1,0 +1,25 @@
+.goToTopBtn {
+  @include flexLayout();
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(color(white), color(primary));
+  bottom: 3rem;
+  right: 4rem;
+  z-index: 1000;
+  border-radius: 50%;
+  box-shadow: 0.1rem 0.1rem 0.7rem color(black);
+  transition: all 0.5s ease;
+
+  &:hover {
+    transform: translateY(-1rem);
+    box-shadow: -0.1rem -0.1rem 0.7rem color(black);
+  }
+
+  i {
+    @include flexLayout();
+    font-size: size(xl);
+    color: color(black);
+    z-index: 1000;
+  }
+}
